@@ -45,5 +45,5 @@ struct Alignment {
     char strand;
 };
 
-Alignment GACT (char* ref_str, char* query_str, std::string ref_name, std::string query_name, int* sub_mat, int gap_open, int gap_extend, int tile_size, int tile_overlap, int ref_pos, int query_pos, uint32_t ref_length, uint32_t query_length, char strand, int first_tile_score_threshold, int mode, int thread_id);
+Alignment GACT (char* ref_str, char* query_str, std::string ref_name, int* sub_mat, int gap_open, int gap_extend, int tile_size, int tile_overlap, int ref_pos, int query_pos, uint32_t ref_length, uint32_t query_length, char strand, int first_tile_score_threshold, int mode, int thread_id);
 

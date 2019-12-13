@@ -90,7 +90,6 @@ add_library (flappie_objects OBJECT
         src/flappie_output.cpp
         src/flappie_structures.cpp
 	src/align.cpp
-	src/darwin_ref_guided.cpp
 	src/fasta.cpp
 	src/l2_hashtable.cpp
 	src/ntcoding.cpp
@@ -141,7 +140,7 @@ else (HDF5_STANDARD)
 	endif (HDF5_SERIAL)
 endif (HDF5_STANDARD)
 
-target_link_libraries (flappie flappie_static ${BLAS} ${HDF5} m)
+target_link_libraries (flappie flappie_static ${BLAS} ${HDF5} m pthread)
 if (APPLE)
 	target_link_libraries (flappie argp)
 endif (APPLE)
@@ -161,7 +160,7 @@ add_executable(flappie_unittest
 	src/test/test_skeleton.c 
 	src/test/test_util.c)
 target_include_directories(flappie_unittest PUBLIC "src/test" "src")
-target_link_libraries(flappie_unittest flappie_static ${BLAS} ${HDF5} m cunit)
+target_link_libraries(flappie_unittest flappie_static ${BLAS} ${HDF5} m cunit pthread)
 
 set (READSDIR ${PROJECT_SOURCE_DIR}/reads)
 set (TESTREAD "MINICOL228_20161012_FNFAB42578_MN17976_mux_scan_HG_52221_ch271_read66_strand")

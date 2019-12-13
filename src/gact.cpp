@@ -49,7 +49,7 @@ std::queue<int> CpuXL(char* ref_str, long long int ref_tile_length, char* query_
 std::queue<int> FpgaXL(char* ref_str, long long int ref_tile_length, char* query_str, long long int query_tile_length, int* sub_mat, int gap_open, int gap_extend, int ref_pos, int query_pos, bool reverse, bool first_tile, int early_terminate, int* BT_states, int *queuesize, char strand, int *rear, int *front, int thread_id); 
 #endif
 
-Alignment GACT (char* ref_str, char* query_str, std::string ref_name, std::string query_name, int* sub_mat, int gap_open, int gap_extend, int tile_size, int tile_overlap, int ref_pos, int query_pos, uint32_t ref_length, uint32_t query_length, char strand, int first_tile_score_threshold, int mode, int thread_id) {
+Alignment GACT (char* ref_str, char* query_str, std::string ref_name, int* sub_mat, int gap_open, int gap_extend, int tile_size, int tile_overlap, int ref_pos, int query_pos, uint32_t ref_length, uint32_t query_length, char strand, int first_tile_score_threshold, int mode, int thread_id) {
     std::queue<int> BT_states_std;
 
     std::string aligned_ref_str = "";
@@ -57,7 +57,7 @@ Alignment GACT (char* ref_str, char* query_str, std::string ref_name, std::strin
 
     Alignment alignment;
     alignment.ref_name = ref_name;
-    alignment.query_name = query_name;
+    //alignment.query_name = query_name;
     alignment.aligned_ref_str = "";
     alignment.aligned_query_str = "";
     alignment.ref_start = ref_pos;
