@@ -1,0 +1,5 @@
+/home/guest-intern/flappie-darwin/build/CMakeFiles/flappie_unittest.dir
+/home/guest-intern/flappie-darwin/build/CMakeFiles/test-verbose.dir
+/home/guest-intern/flappie-darwin/build/CMakeFiles/flappie.dir
+/home/guest-intern/flappie-darwin/build/CMakeFiles/flappie_static.dir
+/home/guest-intern/flappie-darwin/build/CMakeFiles/flappie_objects.dir
