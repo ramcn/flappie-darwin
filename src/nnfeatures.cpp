@@ -16,7 +16,7 @@ flappie_matrix features_from_raw(const raw_table signal, int padding) {
     RETURN_NULL_IF(0 == signal.n, NULL);
     RETURN_NULL_IF(NULL == signal.raw, NULL);
     const size_t nsample = signal.end - signal.start;
-    fprintf(stderr,"features from raw %lu\n",nsample);
+    //fprintf(stderr,"features from raw %lu\n",nsample);
 
     flappie_matrix sigmat = make_flappie_matrix(1, nsample);
     RETURN_NULL_IF(NULL == sigmat, NULL);
